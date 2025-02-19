@@ -43,7 +43,9 @@ TelegramiFrame is a Telegram bot that allows users to stream websites within a T
 
 ## Example 📸
 
-!Example
+## Example 📸
+
+![Example](Screenshot.png)
 
 ## Contributing 🤝
 
