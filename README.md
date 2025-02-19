@@ -43,8 +43,6 @@ TelegramiFrame is a Telegram bot that allows users to stream websites within a T
 
 ## Example 📸
 
-## Example 📸
-
 ![Example](Screenshot.png)
 
 ## Contributing 🤝
@@ -63,4 +61,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️
