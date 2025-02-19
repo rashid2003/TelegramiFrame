@@ -59,6 +59,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
 - [requests](https://docs.python-requests.org/en/latest/)
 
----
-
-Made with ❤️
+Made with ❤️ on a chilly winter night
