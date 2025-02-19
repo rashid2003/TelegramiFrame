@@ -14,7 +14,13 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 async def set_url(update: Update, context: CallbackContext) -> None:
     url = update.message.text
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        await update.message.reply_text(f'Failed to fetch the URL: {e}')
+        return
+
     soup = BeautifulSoup(response.content, 'html.parser')
     
     title = soup.title.string if soup.title else 'No title available'
@@ -36,9 +42,9 @@ async def set_url(update: Update, context: CallbackContext) -> None:
     
     message_text = f'*{title}*\n{description}'
     if icon_url:
-        message_text += f'\nIcon: {icon_url}'
+        message_text += f'\nIcon: [{icon_url}]({icon_url})'
     if preview_image_url:
-        message_text += f'\nPreview: {preview_image_url}'
+        message_text += f'\nPreview: [{preview_image_url}]({preview_image_url})'
     
     await update.message.reply_text(message_text, reply_markup=reply_markup, parse_mode='MarkdownV2')
 
